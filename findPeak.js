@@ -1,12 +1,12 @@
 var array = [3, 4, 5, 6, 1, 2];
 
-/*find the peak when given an array and number of rotations
+/*find the peak when given an sorted array and number of rotations
  *@param a Array
  *@param n integer
  */
 var findPeak = function (a, n) {
     //    debugger;
-    if (a.length === 1 || n == 0) {
+    if (a.length === 1 || (a.length !== 0 || n == 0) {
         return a[a.length - 1];
     } else if (a.length > 1) {
         var peakLocLeftShift = a[a.length - ((n % a.length) + 1)];
